@@ -7,6 +7,7 @@ import RootLayout from "./layout/RootLayout.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import TimelinePage from "./pages/TimelinePage.jsx";
 import StatsPage from "./pages/StatsPage.jsx";
+import NotFound from "./components/NotFound.jsx";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,7 @@ const router = createBrowserRouter([
         Component: StatsPage,
       },
     ],
+    ErrorBoundary: NotFound,
   },
 ]);
 
