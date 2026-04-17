@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "picture": "https://randomuser.me/api/portraits/men/1.jpg",
+    "email": "john.doe@example.com",
+    "days_since_contact": 18,
+    "status": "overdue",
+    "tags": ["college", "close friend"],
+    "bio": "Met in university. Love hiking and late-night talks.",
+    "goal": 14,
+    "next_due_date": "2025-07-20"
+  },
+  {
+    "id": 2,
+    "name": "Ayesha Rahman",
+    "picture": "https://randomuser.me/api/portraits/women/2.jpg",
+    "email": "ayesha.rahman@example.com",
+    "days_since_contact": 10,
+    "status": "almost due",
+    "tags": ["office", "gym buddy"],
+    "bio": "Colleague turned gym partner. Always motivates me.",
+    "goal": 12,
+    "next_due_date": "2025-07-18"
+  },
+  {
+    "id": 3,
+    "name": "Michael Smith",
+    "picture": "https://randomuser.me/api/portraits/men/3.jpg",
+    "email": "michael.smith@example.com",
+    "days_since_contact": 5,
+    "status": "on-track",
+    "tags": ["freelance", "tech"],
+    "bio": "Worked together on multiple freelance projects.",
+    "goal": 14,
+    "next_due_date": "2025-07-25"
+  },
+  {
+    "id": 4,
+    "name": "Nusrat Jahan",
+    "picture": "https://randomuser.me/api/portraits/women/4.jpg",
+    "email": "nusrat.jahan@example.com",
+    "days_since_contact": 20,
+    "status": "overdue",
+    "tags": ["school", "best friend"],
+    "bio": "Best friend from school days. Knows everything about me.",
+    "goal": 10,
+    "next_due_date": "2025-07-15"
+  },
+  {
+    "id": 5,
+    "name": "David Lee",
+    "picture": "https://randomuser.me/api/portraits/men/5.jpg",
+    "email": "david.lee@example.com",
+    "days_since_contact": 11,
+    "status": "almost due",
+    "tags": ["startup", "mentor"],
+    "bio": "Mentor from my startup journey. Great advice giver.",
+    "goal": 14,
+    "next_due_date": "2025-07-19"
+  },
+  {
+    "id": 6,
+    "name": "Fatima Khan",
+    "picture": "https://randomuser.me/api/portraits/women/6.jpg",
+    "email": "fatima.khan@example.com",
+    "days_since_contact": 3,
+    "status": "on-track",
+    "tags": ["neighbor", "family friend"],
+    "bio": "Grew up in the same neighborhood. Family-like bond.",
+    "goal": 7,
+    "next_due_date": "2025-07-22"
+  },
+  {
+    "id": 7,
+    "name": "Rahul Verma",
+    "picture": "https://randomuser.me/api/portraits/men/7.jpg",
+    "email": "rahul.verma@example.com",
+    "days_since_contact": 15,
+    "status": "overdue",
+    "tags": ["college", "roommate"],
+    "bio": "Former roommate. Shared tons of memories.",
+    "goal": 14,
+    "next_due_date": "2025-07-16"
+  },
+  {
+    "id": 8,
+    "name": "Emily Johnson",
+    "picture": "https://randomuser.me/api/portraits/women/8.jpg",
+    "email": "emily.johnson@example.com",
+    "days_since_contact": 8,
+    "status": "almost due",
+    "tags": ["online friend", "design"],
+    "bio": "Met through a design community. Love discussing UI/UX.",
+    "goal": 10,
+    "next_due_date": "2025-07-21"
+  }
+]
