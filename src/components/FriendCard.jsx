@@ -1,9 +1,14 @@
 import React from "react";
 import StatusBadge from "./common/StatusBadge";
+import { useNavigate } from "react-router";
 
 const FriendCard = ({ friend }) => {
+  const navigate = useNavigate();
   return (
-    <div className="bg-white rounded-xl p-6 flex flex-col items-center gap-3 cursor-pointer drop-shadow-md hover:shadow-md transition-shadow">
+    <div
+      onClick={() => navigate(`/friend/${friend.id}`)}
+      className="bg-white rounded-xl p-6 flex flex-col items-center gap-3 cursor-pointer drop-shadow-md hover:shadow-md transition-shadow"
+    >
       <img
         src={friend.picture}
         alt={friend.name}

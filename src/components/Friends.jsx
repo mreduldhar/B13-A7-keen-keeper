@@ -1,17 +1,9 @@
-import React, { useEffect, useState } from "react";
-import friendsData from "/public/friendsData.json";
+import React from "react";
 import FriendCard from "./FriendCard";
+import useFriends from "./hook/useFriends";
 
-const Friends = ({ loading, setLoading }) => {
-  const [friends, setFriends] = useState([]);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setFriends(friendsData);
-      console.log(friendsData);
-      setLoading(false);
-    }, 1200);
-  });
+const Friends = () => {
+  const { friends, loading } = useFriends();
 
   return (
     <section className="max-w-6xl mx-auto pb-16 border-t border-[#e9e9e9] pt-10">
