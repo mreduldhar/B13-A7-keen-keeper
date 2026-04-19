@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/images/logo.svg";
-import { RiHome2Line, RiTimeLine } from "react-icons/ri";
+import { RiHome2Line, RiMenuLine, RiTimeLine } from "react-icons/ri";
 import { IoIosStats } from "react-icons/io";
 import NavLinks from "./common/NavLinks";
+import { IoClose } from "react-icons/io5";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const navItems = [
     {
       path: "/",
@@ -33,14 +35,33 @@ const Navbar = () => {
           </NavLink>
 
           {/* Nav links */}
-          <div className="flex items-center gap-1">
+          <div className="hidden sm:flex items-center gap-1">
             {navItems.map((item, index) => (
               <NavLinks key={index} to={item.path} icon={item.icon}>
                 {item.children}
               </NavLinks>
             ))}
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="sm:hidden text-2xl cursor-pointer"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <IoClose /> : <RiMenuLine />}
+          </button>
         </div>
+
+        {/* Mobile Menu */}
+        {isOpen && (
+          <div className="sm:hidden flex flex-col gap-2 pb-4">
+            {navItems.map((item, index) => (
+              <NavLinks key={index} to={item.path} icon={item.icon}>
+                {item.children}
+              </NavLinks>
+            ))}
+          </div>
+        )}
       </div>
     </nav>
   );

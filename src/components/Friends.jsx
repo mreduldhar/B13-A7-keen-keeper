@@ -6,7 +6,7 @@ const Friends = () => {
   const { friends, loading } = useFriends();
 
   return (
-    <section className="max-w-6xl mx-auto pb-16 border-t border-[#e9e9e9] pt-10">
+    <section className="max-w-6xl mx-auto px-4 sm:px-0 pb-16 border-t border-[#e9e9e9] pt-10">
       <h2 className="text-xl sm:text-2xl font-semibold text-[#1F2937] mb-4">
         Your Friends
       </h2>

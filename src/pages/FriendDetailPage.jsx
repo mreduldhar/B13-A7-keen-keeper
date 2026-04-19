@@ -19,7 +19,7 @@ const FriendDetailPage = () => {
   //   console.log("friends: ", friends);
 
   const matchFriend = friends.find((friend) => friend.id === Number(id));
-  console.log("matched friend", matchFriend);
+  // console.log("matched friend", matchFriend);
 
   const formatDate = (dateStr) => {
     const d = new Date(dateStr);
