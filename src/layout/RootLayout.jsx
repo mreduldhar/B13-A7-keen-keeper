@@ -12,7 +12,7 @@ const RootLayout = () => {
       <Footer />
 
       {/* React Toastify */}
-      <ToastContainer />
+      <ToastContainer position="top-center" />
     </div>
   );
 };
