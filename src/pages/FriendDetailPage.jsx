@@ -8,10 +8,13 @@ import { FiArchive } from "react-icons/fi";
 import { BiPhoneCall } from "react-icons/bi";
 import { MdOutlineTextsms } from "react-icons/md";
 import { IoVideocamOutline } from "react-icons/io5";
+import { useTimeline } from "../context/TimelineContext";
+import { toast } from "react-toastify";
 
 const FriendDetailPage = () => {
   const { id } = useParams();
   const { friends, loading } = useFriends();
+  const { addEntry } = useTimeline();
   //   console.log("id", id);
   //   console.log("friends: ", friends);
 
@@ -25,6 +28,12 @@ const FriendDetailPage = () => {
       day: "numeric",
       year: "numeric",
     });
+  };
+
+  const handleCheckin = (type) => {
+    addEntry(type, matchFriend.name);
+    const labels = { call: "Call", text: "Text", video: "Video" };
+    toast.success(`${labels[type]} with ${matchFriend.name}`);
   };
 
   return (
@@ -129,13 +138,22 @@ const FriendDetailPage = () => {
                   Quick Check-In
                 </h2>
                 <div className="grid grid-cols-3 gap-3">
-                  <button className="border border-[#e9e9e9] rounded-xl p-4 flex flex-col items-center gap-2 text-lg font-medium text-[#1F2937] hover:bg-gray-100 transition-all cursor-pointer">
+                  <button
+                    onClick={() => handleCheckin("call")}
+                    className="border border-[#e9e9e9] rounded-xl p-4 flex flex-col items-center gap-2 text-lg font-medium text-[#1F2937] hover:bg-gray-100 transition-all cursor-pointer"
+                  >
                     <BiPhoneCall /> Call
                   </button>
-                  <button className="border border-[#e9e9e9] rounded-xl p-4 flex flex-col items-center gap-2 text-lg font-medium text-[#1F2937] hover:bg-gray-100  transition-all cursor-pointer">
+                  <button
+                    onClick={() => handleCheckin("text")}
+                    className="border border-[#e9e9e9] rounded-xl p-4 flex flex-col items-center gap-2 text-lg font-medium text-[#1F2937] hover:bg-gray-100  transition-all cursor-pointer"
+                  >
                     <MdOutlineTextsms /> Text
                   </button>
-                  <button className="border border-[#e9e9e9] rounded-xl p-4 flex flex-col items-center gap-2 text-lg font-medium text-[#1F2937] hover:bg-gray-100  transition-all cursor-pointer">
+                  <button
+                    onClick={() => handleCheckin("video")}
+                    className="border border-[#e9e9e9] rounded-xl p-4 flex flex-col items-center gap-2 text-lg font-medium text-[#1F2937] hover:bg-gray-100  transition-all cursor-pointer"
+                  >
                     <IoVideocamOutline /> Video
                   </button>
                 </div>
